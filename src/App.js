@@ -10,16 +10,16 @@ function App() {
   useEffect(() => {
     if (mapContainer.current) {
       const map = new ArcGISMap({
-        basemap: "gray-vector",
+        basemap: "arcgis-midcentury",
       });
-      const view = new MapView({
+      new MapView({
         container: mapContainer.current,
         map: map,
-        zoom: 10,
+        zoom: 8,
         center: [-77.1, 38.85],
       });
     }
-  }, []);
+  }, [mapContainer]);
   return (
     <div className="App">
       <h1>ArcGIS JS MAP using Capacitor</h1>
